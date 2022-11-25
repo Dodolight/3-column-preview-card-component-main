@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+:root {
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+  --Transparent-white: hsla(0, 0%, 100%, 0.75);
+  --Very-light-gray: hsl(0, 0%, 95%);
+  --ft-family1: "Lexend Deca";
+  --ft-family2: "Big Shoulders Display";
+  --ft-size: 15px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  width: 100vw;
+}
+
+section {
+  margin: auto;
+  padding: 5%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
+  box-sizing: border-box;
+  height: 470px;
+  min-height: 420px;
+  max-height: 470px;
+  max-width: 319.8px;
+  padding: 10% 15%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.title,
+.description {
+  margin-top: 10%;
+}
+
+.more {
+  box-sizing: border-box;
+  margin-bottom: 5%;
+  align-self: flex-start;
+  margin-top: auto;
+  padding: 6% 12%;
+  border-radius: 50px;
+  background-color: white;
+}
+
+.description {
+  line-height: 25px;
+  color: var(--Transparent-white);
+}
+
+.first {
+  border-radius: 10px 0 0 10px;
+  background-color: var(--Bright-orange);
+}
+
+.second {
+  background-color: var(--Dark-cyan);
+}
+
+.third {
+  background-color: var(--Very-dark-cyan);
+  border-radius: 0 10px 10px 0;
+}
+
+.title {
+  color: var(--Very-light-gray);
+  font-family: var(--ft-family2);
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.description,
+.more {
+  font-family: var(--ft-family1);
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.first .more:hover,
+.second .more:hover,
+.third .more:hover {
+  cursor: pointer;
+  border: 2px solid white;
+  color: var(--Transparent-white);
+  background-color: transparent;
+}
+
+.first .more {
+  color: var(--Bright-orange);
+}
+
+.second .more {
+  color: var(--Dark-cyan);
+}
+
+.third .more {
+  color: var(--Very-dark-cyan);
+}
+
+@media (max-width: 716px) {
+  section {
+    grid-template-columns: 1fr;
+  }
+
+  .first {
+    border-radius: 10px 10px 0 0;
+  }
+
+  .third {
+    border-radius: 0 0 10px 10px;
+  }
+
+  .card {
+    max-width: 274.5px;
+    height: 430px;
+    min-width: 200px;
+  }
+}
